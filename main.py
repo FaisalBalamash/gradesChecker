@@ -23,12 +23,12 @@ firstRun = True
 
 
 def login():
-    driver.get('https://odusplus-ss.kau.edu.sa/')
+    driver.get('https://odusplus-ss.kau.edu.sa/PROD/twbkwbis.P_WWWLogin')
     username = driver.find_element(By.ID, 'userid')
-    password = driver.find_element(By.ID, 'password')
+    password = driver.find_element(By.NAME, 'PIN')
     username.send_keys(odus_id)
     password.send_keys(odus_password)
-    loginButtonPath = '/html/body/div/div[2]/div/div[1]/div/form/button'
+    loginButtonPath = '//*[@id="loginform"]/table/tbody/tr[2]/td/table/tbody/tr[1]/td[4]/a/img'
     driver.find_element(By.XPATH, loginButtonPath).click()
     time.sleep(2)  # Time to load
 
