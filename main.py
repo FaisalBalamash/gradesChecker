@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from datetime import datetime
 from config import gmail_user, gmail_password, odus_id, odus_password, currentSemesterBodyPath
 import smtplib
+import random
 
 foundCourses = []
 sent_from = gmail_user
@@ -18,7 +19,7 @@ chrome_options.add_argument("--start-maximized")
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-gpu')
 chrome_options.add_argument('--disable-dev-shm-usage')
-driver = webdriver.Chrome(chrome_options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 firstRun = True
 
 
@@ -75,6 +76,7 @@ Subject: %s
                     except:
                         print('Something went wrong...')
     firstRun = False
-   # Change the rate of update here. 
-    print('Sleeping for 15m')
-    time.sleep(900)
+   # Change the rate of update here.
+    timer = random.randint(90, 120)
+    print(f'Sleeping for {timer} seconds')
+    time.sleep(timer)
