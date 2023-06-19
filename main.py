@@ -27,11 +27,11 @@ def login():
     driver.get('https://odusplus-ss.kau.edu.sa/PROD/twbkwbis.P_WWWLogin')
     username = driver.find_element(By.ID, 'userid')
     # Changed By.ID to By.NAME because the inputbox at least on my version does not have ID so I have to use the box name instead
-    password = driver.find_element(By.NAME, 'PIN')
+    password = driver.find_element(By.NAME, 'password')
     username.send_keys(odus_id)
     password.send_keys(odus_password)
     # The old XPATH didn't work out with the newer URL or at least on my part.
-    loginButtonPath = '//*[@id="loginform"]/table/tbody/tr[2]/td/table/tbody/tr[1]/td[4]/a/img'
+    loginButtonPath = '//*[@id="Login"]/button'
     driver.find_element(By.XPATH, loginButtonPath).click()
     time.sleep(2)  # Time to load
 
