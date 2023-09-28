@@ -21,7 +21,7 @@ Before using this script, you need to have the following installed/configured:
     bash
     
 
--   `git clone https://github.com/yourusername/odusplus-grade-checker.git` 
+-   `git clone https://github.com/FaisalBalamash/odusplus-grade-checker.git` 
     
 -   Install the required Python packages using pip:
     
@@ -66,6 +66,3 @@ You can customize the script by modifying the following:
 
 This script was created by Abdulmajeed Alahmadi.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](https://chat.openai.com/c/LICENSE) file for details.
